@@ -4,7 +4,7 @@ from slackclient import SlackClient
 
 BOT_NAME = 'break'
 
-slack_client = SlackClient("xoxb-146752022133-pxiuOc2RXHMJDaPO0hSHL67X")
+slack_client = SlackClient("...")
 
 
 if __name__ == "__main__":

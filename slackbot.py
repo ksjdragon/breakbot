@@ -3,8 +3,9 @@ import datetime
 import pickle
 from slackclient import SlackClient
 from random import randint
+import sys
 
-BOT_ID = 'U4AMH4C4C'
+BOT_ID = sys.argv[1]
 dt = datetime.datetime
 f = open('date.dat','rb')
 targetDate = pickle.load(f)
@@ -15,7 +16,7 @@ AT_BOT = "<@" + BOT_ID + ">"
 EXAMPLE_COMMAND = "do"
 
 # instantiate Slack & Twilio clients
-slack_client = SlackClient("...")
+slack_client = SlackClient(sys.argv[2])
 
 def handle_command(command, channel):
     global targetDate
